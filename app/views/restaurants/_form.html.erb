@@ -1,0 +1,8 @@
+
+<%= form_for @restaurant do |f| %>
+  <p>Name:</p> <%= f.text_field :name %>
+  <p>Address :</p> <%= f.text_field :address %>
+  <p>Phone Number :</p> <%= f.text_field :phone_number %>
+  <p>Category :</p> <%= f.text_field :category %>
+  <%= f.submit %>
+<% end %>

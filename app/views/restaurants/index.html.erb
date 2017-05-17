@@ -1,0 +1,21 @@
+<h1> List of all restaurants </h1>
+<article>
+
+  <% @restaurants.each do |restaurant| %>
+    <ul>
+      <li><strong>Name</strong> : <%= restaurant.name %></li>
+      <li><strong>Address :</strong> <%= restaurant.address %></li>
+      <li><strong>Phone Number :</strong> <%= restaurant.phone_number %></li>
+      <li><strong>Category :</strong> <%= restaurant.category %></li>
+    </ul>
+
+    <p><%= link_to 'show', restaurant_path(restaurant) %> |
+    <%= link_to 'edit', edit_restaurant_path(restaurant) %> |
+    <%= link_to 'delete', restaurant_path(restaurant), method: 'delete' %>
+    </p>
+
+  <% end %>
+
+</article>
+
+<%= link_to 'add new', new_restaurant_path %>
